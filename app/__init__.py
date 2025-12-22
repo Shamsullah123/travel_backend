@@ -18,7 +18,7 @@ def create_app():
     # Extensions - CORS configuration (permissive for development)
     CORS(app, 
          resources={r"/api/*": {
-             "origins": ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5000", "http://127.0.0.1:5000", "http://localhost:5001", "http://127.0.0.1:5001"],
+             "origins": ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5000", "http://127.0.0.1:5000", "http://localhost:5001", "http://127.0.0.1:5001", "https://travel-frontend-op8a82b9o-shamsullah123s-projects.vercel.app/"],
              "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
              "allow_headers": ["Content-Type", "Authorization", "X-Auth-Token"],
              "expose_headers": ["Content-Type", "Authorization", "X-Auth-Token"],
