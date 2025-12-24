@@ -24,7 +24,8 @@ def create_app():
                  "http://localhost:5000", 
                  "http://127.0.0.1:5000", 
                  "https://travel-frontend-cygy0u6x0-shamsullah123s-projects.vercel.app",
-                 "https://travel-backend-jmld.onrender.com"
+                 "https://travel-backend-jmld.onrender.com",
+                 "https://travel-frontend-git-main-shamsullah123s-projects.vercel.app/"
               
              ],
              "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
