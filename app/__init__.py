@@ -23,10 +23,10 @@ def create_app():
                  "http://127.0.0.1:3000", 
                  "http://localhost:5000", 
                  "http://127.0.0.1:5000", 
-                 "http://localhost:5001", 
-                 "http://127.0.0.1:5001", 
-                 "https://travel-frontend-6qyzz76nh-shamsullah123s-projects.vercel.app",
-                 
+                 "https://travel-frontend-op8a82b9o-shamsullah123s-projects.vercel.app/",
+                 "https://travel-frontend-io2sdkmbp-shamsullah123s-projects.vercel.app",
+                 "https://travel-frontend-nc91xlo3p-shamsullah123s-projects.vercel.app",
+                 "https://travel-frontend-odjn7awe0-shamsullah123s-projects.vercel.app"
              ],
              "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
              "allow_headers": ["Content-Type", "Authorization", "X-Auth-Token"],
