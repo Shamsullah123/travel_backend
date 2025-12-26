@@ -7,7 +7,7 @@ from .customer import Customer
 class Applicant(EmbeddedDocument):
     fullName = StringField(required=True)
     gender = StringField(choices=('Male', 'Female'), required=True)
-    dob = DateTimeField(required=True)
+    passportIssueDate = DateTimeField(db_field='dob', required=False)
     passportNumber = StringField(required=True)
     passportExpiry = DateTimeField(required=True)
     nationality = StringField(required=True)

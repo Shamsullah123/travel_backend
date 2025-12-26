@@ -79,10 +79,10 @@ def create_booking():
             for p_data in passengers_data:
                 # Handle date parsing safely
                 try:
-                    dob = datetime.strptime(p_data['dob'].split('T')[0], '%Y-%m-%d')
+                    passportIssueDate = datetime.strptime(p_data['passportIssueDate'].split('T')[0], '%Y-%m-%d')
                     expiry = datetime.strptime(p_data['expiryDate'].split('T')[0], '%Y-%m-%d')
                 except:
-                    dob = datetime.utcnow()
+                    passportIssueDate = datetime.utcnow()
                     expiry = datetime.utcnow() # Fallback or error
 
                 passengers.append(Passenger(
@@ -91,7 +91,7 @@ def create_booking():
                     givenName=p_data['givenName'],
                     surName=p_data['surName'],
                     passportNumber=p_data['passportNumber'],
-                    dob=dob,
+                    passportIssueDate=passportIssueDate,
                     expiryDate=expiry
                 ))
 

@@ -9,7 +9,7 @@ class Passenger(EmbeddedDocument):
     givenName = StringField(required=True)
     surName = StringField(required=True)
     passportNumber = StringField(required=True)
-    dob = DateTimeField(required=True)
+    passportIssueDate = DateTimeField(db_field='dob', required=False)
     expiryDate = DateTimeField(required=True)
 
 class TicketBooking(Document):

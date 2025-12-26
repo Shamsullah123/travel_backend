@@ -1,6 +1,7 @@
 from flask import Flask
 from mongoengine import connect
 from flask_cors import CORS
+from flask_compress import Compress
 import os
 from dotenv import load_dotenv
 
@@ -11,6 +12,12 @@ def create_app():
     
     # Config
     app.config['SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'dev_key')
+    app.config['COMPRESS_ALGORITHM'] = 'gzip'
+    app.config['COMPRESS_LEVEL'] = 6
+    app.config['COMPRESS_MIN_SIZE'] = 500
+    
+    # Extensions
+    Compress(app)
     
     # Database Connection
     connect(host=os.getenv('MONGODB_URI'))
